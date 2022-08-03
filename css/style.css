@@ -1,0 +1,445 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    height: 3000px;
+}
+section{
+    padding: 10rem 15rem;
+}
+.btn{
+    display: inline-block;
+    padding: 12px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    transition: all 0.5s ease;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    border: 1px solid #ff508e;
+    background-color: #ff508e;
+    color: #fff;
+}
+.tittle{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: normal;
+    padding: .5rem 0;
+    display: inline-block;
+    position: relative;
+}
+.tittle::after{
+    content: "";
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    position: absolute;
+    top: 90%;
+}
+.sub-tittle{
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+/* header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    z-index: 10;
+    transition: all.5s ease;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+}
+li {
+    list-style: none;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: inline-block;
+}
+.toggle,
+nav a{
+    /* border: 1px solid green; */
+    padding: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all.5s ease;
+    color: #fff;
+}
+.toggle{
+    background-color: #ff508e;
+    color: #fff;
+    display: none;
+}
+header.bg{
+    background-color: #ff508e;
+    color: #333;
+}
+.navbar-menu.active,
+.navbar-social.active {
+    display: block;
+}
+
+/* home */
+.home{
+    /* border: 1px solid red; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; */
+    color: white;
+    position: relative;
+    background-image: url(../protfolio/img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-content{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    /* border: 1px solid gold; */
+    width: 50%;
+    transform: translateY(-50%);
+}
+.home-content .name{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.home-content .title{
+    text-transform: capitalize;
+    font-size:4rem;
+    font-weight: 900;
+}
+.para{
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .5rem 0;
+}
+.home-content a{
+    color: white;
+    border: 1px solid#fff;
+}
+.home-content a:hover{
+    background-color: #ff508e;
+    /* border: 1px solid white; */
+}
+.home-content .name,
+.home-content .title,
+.home-content .para,
+.home-content a{
+    margin: 1.5rem 0;
+}
+.home-pic{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50rem;
+    padding-right: 10rem;
+    z-index: 2;
+}
+.home-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home .circle{
+    position: absolute;
+    background-color: #ff508e;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    top: 20%;
+    right: 15%;
+}
+.home .circle::after{
+    content: "";
+    display: inline-block;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background: linear-gradient(purple, #ff508e);
+    animation: move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes move{
+    0%{
+        transform: translate(5%, -5%);
+    }
+    50%{
+        transform: translate(-5%, 5%);
+    }
+    100%{
+        transform: translate(5%, -5%);
+    }
+}
+.wave{
+    height: 10rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+.wave img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* about */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-img, .about-content{
+    width: 50%;
+}
+.about-img img{
+    width: 100%;
+    border: 1rem solid #eee;
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+}
+.about-content{
+    padding-left: 3rem;
+}
+.about-content a{
+    margin: 1rem 0;
+}
+.info{
+    text-transform: uppercase;
+    padding: .5rem 0;
+}
+
+/* service */
+.service{
+    text-align: center;
+    background-color: #eeeeee;
+}
+.service-content{
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+}
+.service-content .box{
+    width: 30%;
+    padding: 1rem;
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, .4);
+    border-radius: 7px;
+    background-color: #fff;
+}
+.service-content .box-tittle{
+    padding: 1.3rem 0;
+    text-transform: capitalize;
+    font-weight: bold;
+    position: relative;
+}
+.service-content .box-tittle::after{
+    content: "";
+    display: inline-block;
+    width: 3rem;
+    height: 3px;
+    background-color: #cdcdcd;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.service-content .box-info{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+/* skill */
+.skill{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)), url("../protfolio/img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.skill-content, .skill-progress{
+    width: 50%;
+    color: #fff;
+}
+.skill-content{
+    padding-right: 2rem;
+}
+.skill-progress .progress-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+.skill-progress .progress-tittle{
+    text-transform: capitalize;
+}
+.progress-bar progress{
+    width: 100%;
+    height: .3rem;
+    margin: .5rem 0;
+    background-color: gray;
+}
+.progress-bar::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    position: absolute;
+    top: 32%;
+    left: 0;
+}
+.progress-bar .progress-value{
+    color: #ff508e;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+/* mozilla */
+.progress-bar progress::-moz-progress-bar{
+    background-color: white;
+}
+/* chrome */
+progress::-webkit-progress-bar{
+    background-color: white;
+}progress::-webkit-progress-value{
+    background-color: #ff508e;
+}
+.skill-content .tittle{
+    color: #ff508e;
+}
+
+/* gallery */
+.gallery{
+    background-color: #cdcdcd;
+    text-align: center;
+}
+.gallery .tittle{
+    color: #ff508e;
+}
+.gallery .gallery-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 3rem;
+    /* border: 1px solid red; */
+}
+.gallery-box .box{
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, .4);
+    border-radius: .5rem;
+    height: 12rem;
+    width: 30%;
+}
+.gallery-box img{
+    padding: .3rem;
+    height: 100%;
+    border-radius: .5rem;
+    background-size: cover;
+}
+#up{
+    z-index: 10;
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    background-color:#ff508e;
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    transition: all .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* media query */
+@media (max-width: 1200px){
+    .home-pic, .circle{
+        display: none;
+    }
+    .service-content .box{
+        width: 47%;
+    }
+}
+@media (max-width: 992px){
+    header{
+        background-color: #ff508e;
+    }
+    .toggle{
+        display: block;
+    }
+    .navbar-menu, .navbar-social{
+        display: none;
+        width: 100%;
+    }
+    nav li{
+        display: block;
+        text-align: left;
+    }
+    .navbar-menu a, .navbar-social a{
+        width: 100%;
+    }
+    .about-img, .about-content{
+        width: 100%;
+        padding: 0;
+    }
+    section{
+        padding: 5rem 5rem;
+    }
+}
+@media (max-width:768px){
+    html{
+        font-size: 75%;
+    }
+    .home-content{
+        width: 80%;
+    }
+    .skill-content, .skill-progress{
+        width: 100%;
+        padding: 1rem 0;
+    }
+}
+@media (max-width:576px){
+    .service-content .box{
+        width: 100%;
+    }
+    .about-content{
+        padding-top: 3rem;
+    }
+}

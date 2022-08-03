@@ -1,0 +1,131 @@
+/* global css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 70%;
+}
+.btn {
+    border: 1px solid #fff;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .5s;
+}
+.btn:hover {
+    background-color: #FF508E;
+    border: 1px solid #FF508E;
+}
+
+/* header */
+header {
+    position: fixed;
+    /* width: 100%; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+li {
+    list-style: none;
+    text-align:center;
+    display: inline-block;
+}
+nav a,
+.toggle {
+    padding: 1rem;
+    display: inline-block;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+}
+nav a:hover {
+    color: #FF508E;
+}
+.toggle {
+    display: none;
+}
+
+/* home */
+.home {
+    height: 100vh;
+    position: relative;
+    background-color: #333;
+}
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 50%;
+    transform: translateY(-50%);
+}
+.home-content .name {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.para {
+    text-transform: none;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+.home-content .title {
+    text-transform: capitalize;
+    font-size: 4rem;
+    font-weight: 900;
+}
+.home-content .name, 
+.home-content .para,
+.home-content .title {
+    margin: 1.5rem 0;
+    color: #fff;
+}
+
+/* media query */
+@media (max-width: 992px) {
+    .toggle {
+        display: block;
+    }
+    .navbar-menu, .navbar-social {
+        display: none;
+        width: 100%;
+    }
+    nav li {
+        display: block;
+        text-align: left;
+    }
+    .navbar-menu a,
+    .navbar-social a {
+        width: 100%;
+    }
+    .toggle:hover ~ .navbar-menu {
+        display: block;
+    }
+    .toggle:hover ~ .navbar-social {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 70%;
+    }
+    .home-content {
+        width: 80%;
+    }
+}
